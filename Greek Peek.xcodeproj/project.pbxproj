@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE0234A627E2672B004F193B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234A527E2672B004F193B /* AppDelegate.swift */; };
+		AE0234A827E2672B004F193B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234A727E2672B004F193B /* SceneDelegate.swift */; };
+		AE0234AA27E2672B004F193B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234A927E2672B004F193B /* ViewController.swift */; };
+		AE0234AD27E2672B004F193B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0234AB27E2672B004F193B /* Main.storyboard */; };
+		AE0234AF27E2672D004F193B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0234AE27E2672D004F193B /* Assets.xcassets */; };
+		AE0234B227E2672D004F193B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0234B027E2672D004F193B /* LaunchScreen.storyboard */; };
+		AE0234BD27E2672D004F193B /* Greek_PeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234BC27E2672D004F193B /* Greek_PeekTests.swift */; };
+		AE0234C727E2672D004F193B /* Greek_PeekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234C627E2672D004F193B /* Greek_PeekUITests.swift */; };
+		AE0234C927E2672D004F193B /* Greek_PeekUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234C827E2672D004F193B /* Greek_PeekUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE0234B927E2672D004F193B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE02349A27E2672B004F193B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE0234A127E2672B004F193B;
+			remoteInfo = "Greek Peek";
+		};
+		AE0234C327E2672D004F193B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE02349A27E2672B004F193B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE0234A127E2672B004F193B;
+			remoteInfo = "Greek Peek";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE0234A227E2672B004F193B /* Greek Peek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greek Peek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0234A527E2672B004F193B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE0234A727E2672B004F193B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE0234A927E2672B004F193B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE0234AC27E2672B004F193B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE0234AE27E2672D004F193B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE0234B127E2672D004F193B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE0234B327E2672D004F193B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE0234B827E2672D004F193B /* Greek PeekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Greek PeekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0234BC27E2672D004F193B /* Greek_PeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greek_PeekTests.swift; sourceTree = "<group>"; };
+		AE0234C227E2672D004F193B /* Greek PeekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Greek PeekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0234C627E2672D004F193B /* Greek_PeekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greek_PeekUITests.swift; sourceTree = "<group>"; };
+		AE0234C827E2672D004F193B /* Greek_PeekUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greek_PeekUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE02349F27E2672B004F193B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234B527E2672D004F193B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234BF27E2672D004F193B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE02349927E2672B004F193B = {
+			isa = PBXGroup;
+			children = (
+				AE0234A427E2672B004F193B /* Greek Peek */,
+				AE0234BB27E2672D004F193B /* Greek PeekTests */,
+				AE0234C527E2672D004F193B /* Greek PeekUITests */,
+				AE0234A327E2672B004F193B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE0234A327E2672B004F193B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234A227E2672B004F193B /* Greek Peek.app */,
+				AE0234B827E2672D004F193B /* Greek PeekTests.xctest */,
+				AE0234C227E2672D004F193B /* Greek PeekUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE0234A427E2672B004F193B /* Greek Peek */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234A527E2672B004F193B /* AppDelegate.swift */,
+				AE0234A727E2672B004F193B /* SceneDelegate.swift */,
+				AE0234A927E2672B004F193B /* ViewController.swift */,
+				AE0234AB27E2672B004F193B /* Main.storyboard */,
+				AE0234AE27E2672D004F193B /* Assets.xcassets */,
+				AE0234B027E2672D004F193B /* LaunchScreen.storyboard */,
+				AE0234B327E2672D004F193B /* Info.plist */,
+			);
+			path = "Greek Peek";
+			sourceTree = "<group>";
+		};
+		AE0234BB27E2672D004F193B /* Greek PeekTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234BC27E2672D004F193B /* Greek_PeekTests.swift */,
+			);
+			path = "Greek PeekTests";
+			sourceTree = "<group>";
+		};
+		AE0234C527E2672D004F193B /* Greek PeekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234C627E2672D004F193B /* Greek_PeekUITests.swift */,
+				AE0234C827E2672D004F193B /* Greek_PeekUITestsLaunchTests.swift */,
+			);
+			path = "Greek PeekUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE0234A127E2672B004F193B /* Greek Peek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE0234CC27E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek Peek" */;
+			buildPhases = (
+				AE02349E27E2672B004F193B /* Sources */,
+				AE02349F27E2672B004F193B /* Frameworks */,
+				AE0234A027E2672B004F193B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Greek Peek";
+			productName = "Greek Peek";
+			productReference = AE0234A227E2672B004F193B /* Greek Peek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE0234B727E2672D004F193B /* Greek PeekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE0234CF27E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek PeekTests" */;
+			buildPhases = (
+				AE0234B427E2672D004F193B /* Sources */,
+				AE0234B527E2672D004F193B /* Frameworks */,
+				AE0234B627E2672D004F193B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE0234BA27E2672D004F193B /* PBXTargetDependency */,
+			);
+			name = "Greek PeekTests";
+			productName = "Greek PeekTests";
+			productReference = AE0234B827E2672D004F193B /* Greek PeekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE0234C127E2672D004F193B /* Greek PeekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE0234D227E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek PeekUITests" */;
+			buildPhases = (
+				AE0234BE27E2672D004F193B /* Sources */,
+				AE0234BF27E2672D004F193B /* Frameworks */,
+				AE0234C027E2672D004F193B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE0234C427E2672D004F193B /* PBXTargetDependency */,
+			);
+			name = "Greek PeekUITests";
+			productName = "Greek PeekUITests";
+			productReference = AE0234C227E2672D004F193B /* Greek PeekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE02349A27E2672B004F193B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					AE0234A127E2672B004F193B = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					AE0234B727E2672D004F193B = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = AE0234A127E2672B004F193B;
+					};
+					AE0234C127E2672D004F193B = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = AE0234A127E2672B004F193B;
+					};
+				};
+			};
+			buildConfigurationList = AE02349D27E2672B004F193B /* Build configuration list for PBXProject "Greek Peek" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE02349927E2672B004F193B;
+			productRefGroup = AE0234A327E2672B004F193B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE0234A127E2672B004F193B /* Greek Peek */,
+				AE0234B727E2672D004F193B /* Greek PeekTests */,
+				AE0234C127E2672D004F193B /* Greek PeekUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE0234A027E2672B004F193B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0234B227E2672D004F193B /* LaunchScreen.storyboard in Resources */,
+				AE0234AF27E2672D004F193B /* Assets.xcassets in Resources */,
+				AE0234AD27E2672B004F193B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234B627E2672D004F193B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234C027E2672D004F193B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE02349E27E2672B004F193B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0234AA27E2672B004F193B /* ViewController.swift in Sources */,
+				AE0234A627E2672B004F193B /* AppDelegate.swift in Sources */,
+				AE0234A827E2672B004F193B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234B427E2672D004F193B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0234BD27E2672D004F193B /* Greek_PeekTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0234BE27E2672D004F193B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0234C927E2672D004F193B /* Greek_PeekUITestsLaunchTests.swift in Sources */,
+				AE0234C727E2672D004F193B /* Greek_PeekUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE0234BA27E2672D004F193B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE0234A127E2672B004F193B /* Greek Peek */;
+			targetProxy = AE0234B927E2672D004F193B /* PBXContainerItemProxy */;
+		};
+		AE0234C427E2672D004F193B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE0234A127E2672B004F193B /* Greek Peek */;
+			targetProxy = AE0234C327E2672D004F193B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE0234AB27E2672B004F193B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0234AC27E2672B004F193B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE0234B027E2672D004F193B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE0234B127E2672D004F193B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE0234CA27E2672D004F193B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE0234CB27E2672D004F193B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE0234CD27E2672D004F193B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Greek Peek/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-Peek";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE0234CE27E2672D004F193B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Greek Peek/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-Peek";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE0234D027E2672D004F193B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-PeekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greek Peek.app/Greek Peek";
+			};
+			name = Debug;
+		};
+		AE0234D127E2672D004F193B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-PeekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greek Peek.app/Greek Peek";
+			};
+			name = Release;
+		};
+		AE0234D327E2672D004F193B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-PeekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Greek Peek";
+			};
+			name = Debug;
+		};
+		AE0234D427E2672D004F193B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sylvanm.Greek-PeekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Greek Peek";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE02349D27E2672B004F193B /* Build configuration list for PBXProject "Greek Peek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0234CA27E2672D004F193B /* Debug */,
+				AE0234CB27E2672D004F193B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE0234CC27E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek Peek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0234CD27E2672D004F193B /* Debug */,
+				AE0234CE27E2672D004F193B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE0234CF27E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek PeekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0234D027E2672D004F193B /* Debug */,
+				AE0234D127E2672D004F193B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE0234D227E2672D004F193B /* Build configuration list for PBXNativeTarget "Greek PeekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE0234D327E2672D004F193B /* Debug */,
+				AE0234D427E2672D004F193B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE02349A27E2672B004F193B /* Project object */;
+}
