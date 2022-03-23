@@ -47,37 +47,41 @@ class RouteAnnotation: NSObject, MKAnnotation {
     
 }
 
-class RouteOverlay: MKPolyline {
+class RouteOverlay: NSObject, MKOverlay {
     
     let route: Route
-    let poly: MKPolyline
+    
+    var coordinate: CLLocationCoordinate2D {
+        route.generalCoords
+    }
+    
+    var boundingMapRect: MKMapRect {
+        MKPolyline(coordinates: route.pathCoords, count: route.pathCoords.count).boundingMapRect
+    }
 
-    init(route: Route, poly: MKPolyline) {
+    init(route: Route) {
         self.route = route
-        self.poly = poly
     }
     
 }
 
 class RouteOverlayRenderer: MKOverlayRenderer {
     
-    var routeOverlay: RouteOverlay
-    
-    init(overlay: MKOverlay, routeOverlay: RouteOverlay) {
-        self.routeOverlay = routeOverlay
-        super.init(overlay: overlay)
-        print("Created Renderer")
-    }
-    
     override func draw(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
-        print("Drawing")
         
-        let polylineRenderer = MKPolylineRenderer(polyline: routeOverlay.poly)
-
-        polylineRenderer.strokeColor = routeOverlay.route.difficulty.color
-        polylineRenderer.lineWidth = 5
+        if let route = (overlay as? RouteOverlay)?.route {
+            let polyline = MKPolyline(coordinates: route.pathCoords, count: route.pathCoords.count)
+            let polyRend = MKPolylineRenderer(polyline: polyline)
+            
+            polyRend.strokeColor = route.difficulty.color
+            polyRend.lineWidth = 5
+            
+            polyRend.draw(mapRect, zoomScale: zoomScale, in: context)
+            return
+        }
         
-        polylineRenderer.draw(mapRect, zoomScale: zoomScale, in: context)
+        super.draw(mapRect, zoomScale: zoomScale, in: context)
+        
     }
-    
+        
 }

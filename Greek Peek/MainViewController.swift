@@ -23,7 +23,7 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         
         gatherRoutes { routes in
             self.mapView.addAnnotations( routes.map { RouteAnnotation(route: $0) } )
-            self.mapView.addOverlays( routes.map { RouteOverlay(route: $0, poly: MKPolyline(coordinates: $0.pathCoords, count: $0.pathCoords.count)) } )
+            self.mapView.addOverlays( routes.map { RouteOverlay(route: $0) } )
         }
         
     }
@@ -69,7 +69,7 @@ class MainViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
         if let routeOverlay = overlay as? RouteOverlay {
-            return RouteOverlayRenderer(overlay: overlay, routeOverlay: routeOverlay)
+            return RouteOverlayRenderer(overlay: routeOverlay)
         }
 
         return MKOverlayRenderer(overlay: overlay)
