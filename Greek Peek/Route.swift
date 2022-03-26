@@ -40,6 +40,55 @@ struct Route {
     // MARK: Initializers
     
     /**
+     * Creates a `Route` based on a `JSON` object
+     */
+    init(jsonData: Data) throws {
+        
+        print("Creating json object")
+        
+        do {
+            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any] {
+                
+                if let name = json["name"] as? String {
+                    self.name = name
+                } else {
+                    throw RouteError.jsonDecodingError("name")
+                }
+                
+                if let difficultyValue = json["difficulty"] as? Int {
+                    guard let difficulty = Difficulty(rawValue: difficultyValue) else {
+                        throw RouteError.jsonDecodingError("invalid difficulty")
+                    }
+                    self.difficulty = difficulty
+                } else {
+                    throw RouteError.jsonDecodingError("difficulty")
+                }
+                
+                if let latitude = json["latitude"] as? Double, let longitude = json["longitude"] as? Double {
+                    self.generalCoords = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                } else {
+                    throw RouteError.jsonDecodingError("coords")
+                }
+                
+                if let path = json["path"] as? [[Double]] {
+                    self.pathCoords = path.map { coords in
+                        CLLocationCoordinate2D(latitude: coords[0], longitude: coords[1])
+                    }
+                } else {
+                    throw RouteError.jsonDecodingError("path")
+                }
+                
+                
+            } else {
+                throw RouteError.jsonDecodingError("nil json")
+            }
+        } catch {
+            throw RouteError.jsonDecodingError("JSON Serialization Error")
+        }
+        
+    }
+    
+    /**
      * Creates a route based on a coordinate and a name
      */
     init(name: String, latitude: Double, longitude: Double, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
@@ -96,6 +145,20 @@ struct Route {
                 return UIColor.black
             }
         }
+    }
+    
+    // MARK: Errors
+    
+    /**
+     * An error that can occur with a `Route` state
+     */
+    enum RouteError: Error {
+        
+        /**
+         * Thrown when a certain JSON object cannot be decoded into a `Route`
+         */
+        case jsonDecodingError(String)
+        
     }
     
 }

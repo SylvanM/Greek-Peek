@@ -19,6 +19,10 @@
 		AE0234D727EAE92F004F193B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0234D627EAE92F004F193B /* MapKit.framework */; };
 		AE0234DB27EAEAFF004F193B /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234DA27EAEAFF004F193B /* Route.swift */; };
 		AE0234DD27EB7D31004F193B /* RouteRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234DC27EB7D31004F193B /* RouteRenderer.swift */; };
+		AECA068127EBCAF6000E3C6A /* odyssey.json in Resources */ = {isa = PBXBuildFile; fileRef = AECA068027EBCAF6000E3C6A /* odyssey.json */; };
+		AECA068427EECA59000E3C6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA068327EECA59000E3C6A /* NetworkManager.swift */; };
+		AECA068627EECAE2000E3C6A /* east_meadows.json in Resources */ = {isa = PBXBuildFile; fileRef = AECA068527EECAE2000E3C6A /* east_meadows.json */; };
+		AECA068827EECC7E000E3C6A /* trojan.json in Resources */ = {isa = PBXBuildFile; fileRef = AECA068727EECC7E000E3C6A /* trojan.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		AE0234D627EAE92F004F193B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE0234DA27EAEAFF004F193B /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		AE0234DC27EB7D31004F193B /* RouteRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRenderer.swift; sourceTree = "<group>"; };
+		AECA068027EBCAF6000E3C6A /* odyssey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = odyssey.json; sourceTree = "<group>"; };
+		AECA068327EECA59000E3C6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AECA068527EECAE2000E3C6A /* east_meadows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = east_meadows.json; sourceTree = "<group>"; };
+		AECA068727EECC7E000E3C6A /* trojan.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = trojan.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		AE02349927E2672B004F193B = {
 			isa = PBXGroup;
 			children = (
+				AE0234DE27EBC431004F193B /* Data */,
 				AE0234A427E2672B004F193B /* Greek Peek */,
 				AE0234BB27E2672D004F193B /* Greek PeekTests */,
 				AE0234C527E2672D004F193B /* Greek PeekUITests */,
@@ -107,6 +116,7 @@
 		AE0234A427E2672B004F193B /* Greek Peek */ = {
 			isa = PBXGroup;
 			children = (
+				AECA068227EECA40000E3C6A /* Networking */,
 				AE0234A527E2672B004F193B /* AppDelegate.swift */,
 				AE0234A727E2672B004F193B /* SceneDelegate.swift */,
 				AE0234A927E2672B004F193B /* MainViewController.swift */,
@@ -143,6 +153,24 @@
 				AE0234D627EAE92F004F193B /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE0234DE27EBC431004F193B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AECA068027EBCAF6000E3C6A /* odyssey.json */,
+				AECA068527EECAE2000E3C6A /* east_meadows.json */,
+				AECA068727EECC7E000E3C6A /* trojan.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AECA068227EECA40000E3C6A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AECA068327EECA59000E3C6A /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECA068127EBCAF6000E3C6A /* odyssey.json in Resources */,
 				AE0234B227E2672D004F193B /* LaunchScreen.storyboard in Resources */,
 				AE0234AF27E2672D004F193B /* Assets.xcassets in Resources */,
+				AECA068827EECC7E000E3C6A /* trojan.json in Resources */,
+				AECA068627EECAE2000E3C6A /* east_meadows.json in Resources */,
 				AE0234AD27E2672B004F193B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECA068427EECA59000E3C6A /* NetworkManager.swift in Sources */,
 				AE0234DD27EB7D31004F193B /* RouteRenderer.swift in Sources */,
 				AE0234AA27E2672B004F193B /* MainViewController.swift in Sources */,
 				AE0234DB27EAEAFF004F193B /* Route.swift in Sources */,

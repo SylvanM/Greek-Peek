@@ -81,35 +81,15 @@ class MainViewController: UIViewController, MKMapViewDelegate {
      * Gathers a list of all the available routes
      */
     func gatherRoutes(completion: @escaping ([Route]) -> ()) {
-        completion(allRoutes)
+        do {
+            try NetworkManager.getAllRoutes { routes in
+                completion(routes)
+            }
+        } catch {
+            print("Something terrible happened!")
+        }
     }
 
 }
 
-let allRoutes = [
-    Route(
-        name: "East Meadows",
-        latitude: 42.502848, longitude: -76.148683,
-        difficulty: .green,
-        pathCoords: [
-            CLLocationCoordinate2D(latitude: 42.502358, longitude: -76.150309),
-            CLLocationCoordinate2D(latitude: 42.502620, longitude: -76.146984),
-            CLLocationCoordinate2D(latitude: 42.503706, longitude: -76.145122)
-        ]
-    ),
-    
-    Route(
-        name: "Odyssey",
-        latitude: 42.505393, longitude: -76.150207,
-        difficulty: .black,
-        pathCoords: []
-    ),
-    
-    Route(
-        name: "Trojan",
-        latitude: 42.497478, longitude: -76.145435,
-        difficulty: .blue,
-        pathCoords: []
-    )
-    
-]
+
