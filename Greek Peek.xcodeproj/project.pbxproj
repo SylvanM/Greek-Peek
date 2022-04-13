@@ -19,6 +19,8 @@
 		AE0234D727EAE92F004F193B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0234D627EAE92F004F193B /* MapKit.framework */; };
 		AE0234DB27EAEAFF004F193B /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234DA27EAEAFF004F193B /* Route.swift */; };
 		AE0234DD27EB7D31004F193B /* RouteRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0234DC27EB7D31004F193B /* RouteRenderer.swift */; };
+		AEA8442627F4B61A00E1971F /* RouteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA8442527F4B61A00E1971F /* RouteManager.swift */; };
+		AEA8442B27F4DB9500E1971F /* RouteManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA8442A27F4DB9500E1971F /* RouteManagerDelegate.swift */; };
 		AECA068127EBCAF6000E3C6A /* odyssey.json in Resources */ = {isa = PBXBuildFile; fileRef = AECA068027EBCAF6000E3C6A /* odyssey.json */; };
 		AECA068427EECA59000E3C6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA068327EECA59000E3C6A /* NetworkManager.swift */; };
 		AECA068627EECAE2000E3C6A /* east_meadows.json in Resources */ = {isa = PBXBuildFile; fileRef = AECA068527EECAE2000E3C6A /* east_meadows.json */; };
@@ -59,6 +61,8 @@
 		AE0234D627EAE92F004F193B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE0234DA27EAEAFF004F193B /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		AE0234DC27EB7D31004F193B /* RouteRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRenderer.swift; sourceTree = "<group>"; };
+		AEA8442527F4B61A00E1971F /* RouteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteManager.swift; sourceTree = "<group>"; };
+		AEA8442A27F4DB9500E1971F /* RouteManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteManagerDelegate.swift; sourceTree = "<group>"; };
 		AECA068027EBCAF6000E3C6A /* odyssey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = odyssey.json; sourceTree = "<group>"; };
 		AECA068327EECA59000E3C6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AECA068527EECAE2000E3C6A /* east_meadows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = east_meadows.json; sourceTree = "<group>"; };
@@ -116,16 +120,16 @@
 		AE0234A427E2672B004F193B /* Greek Peek */ = {
 			isa = PBXGroup;
 			children = (
-				AECA068227EECA40000E3C6A /* Networking */,
 				AE0234A527E2672B004F193B /* AppDelegate.swift */,
 				AE0234A727E2672B004F193B /* SceneDelegate.swift */,
-				AE0234A927E2672B004F193B /* MainViewController.swift */,
+				AEA8442927F4B63100E1971F /* View */,
+				AEA8442827F4B62900E1971F /* Model */,
+				AEA8442727F4B61F00E1971F /* File Management */,
+				AECA068227EECA40000E3C6A /* Networking */,
 				AE0234AB27E2672B004F193B /* Main.storyboard */,
 				AE0234AE27E2672D004F193B /* Assets.xcassets */,
 				AE0234B027E2672D004F193B /* LaunchScreen.storyboard */,
 				AE0234B327E2672D004F193B /* Info.plist */,
-				AE0234DA27EAEAFF004F193B /* Route.swift */,
-				AE0234DC27EB7D31004F193B /* RouteRenderer.swift */,
 			);
 			path = "Greek Peek";
 			sourceTree = "<group>";
@@ -163,6 +167,32 @@
 				AECA068727EECC7E000E3C6A /* trojan.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		AEA8442727F4B61F00E1971F /* File Management */ = {
+			isa = PBXGroup;
+			children = (
+				AEA8442527F4B61A00E1971F /* RouteManager.swift */,
+			);
+			path = "File Management";
+			sourceTree = "<group>";
+		};
+		AEA8442827F4B62900E1971F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234DA27EAEAFF004F193B /* Route.swift */,
+				AEA8442A27F4DB9500E1971F /* RouteManagerDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEA8442927F4B63100E1971F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE0234A927E2672B004F193B /* MainViewController.swift */,
+				AE0234DC27EB7D31004F193B /* RouteRenderer.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AECA068227EECA40000E3C6A /* Networking */ = {
@@ -309,9 +339,11 @@
 			files = (
 				AECA068427EECA59000E3C6A /* NetworkManager.swift in Sources */,
 				AE0234DD27EB7D31004F193B /* RouteRenderer.swift in Sources */,
+				AEA8442B27F4DB9500E1971F /* RouteManagerDelegate.swift in Sources */,
 				AE0234AA27E2672B004F193B /* MainViewController.swift in Sources */,
 				AE0234DB27EAEAFF004F193B /* Route.swift in Sources */,
 				AE0234A627E2672B004F193B /* AppDelegate.swift in Sources */,
+				AEA8442627F4B61A00E1971F /* RouteManager.swift in Sources */,
 				AE0234A827E2672B004F193B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,11 @@ struct Route {
     // MARK: Properties
     
     /**
+     * A unique identifier for every route
+     */
+    let identifier: Int
+    
+    /**
      * The coordinates of the starting location of the route
      */
     let generalCoords: CLLocationCoordinate2D
@@ -48,6 +53,12 @@ struct Route {
         
         do {
             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any] {
+                
+                if let id = json["id"] as? Int {
+                    self.identifier = id
+                } else {
+                    throw RouteError.jsonDecodingError("no id")
+                }
                 
                 if let name = json["name"] as? String {
                     self.name = name
@@ -91,8 +102,9 @@ struct Route {
     /**
      * Creates a route based on a coordinate and a name
      */
-    init(name: String, latitude: Double, longitude: Double, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
+    init(id: Int, name: String, latitude: Double, longitude: Double, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
         self.init(
+            id: id,
             name: name,
             location: CLLocationCoordinate2D(
                 latitude: latitude,
@@ -102,7 +114,8 @@ struct Route {
         )
     }
     
-    init(name: String, location: CLLocationCoordinate2D, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
+    init(id: Int, name: String, location: CLLocationCoordinate2D, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
+        self.identifier = id
         self.name = name
         self.generalCoords = location
         self.difficulty = difficulty

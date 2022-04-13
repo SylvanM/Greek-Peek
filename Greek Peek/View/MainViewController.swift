@@ -85,8 +85,10 @@ class MainViewController: UIViewController, MKMapViewDelegate {
             try NetworkManager.getAllRoutes { routes in
                 completion(routes)
             }
+        } catch Route.RouteError.jsonDecodingError(let e) {
+            print("Decoding error:", e)
         } catch {
-            print("Something terrible happened!")
+            print("Some other error occured")
         }
     }
 

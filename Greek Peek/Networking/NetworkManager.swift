@@ -11,12 +11,10 @@ class NetworkManager {
     
     // MARK: Properties
     
-    // idk maybe have a URL here
+    
     
     // MARK: Methods
     
-    // idk if this should be static or not
-
     static func getAllRoutes(completion: @escaping ([Route]) -> ()) throws {
         
         let odysseyURL = URL(fileURLWithPath: Bundle.main.path(forResource: "odyssey", ofType: ".json")!)
