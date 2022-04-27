@@ -37,6 +37,11 @@ struct Route {
      */
     let difficulty: Difficulty
     
+    /**
+     * A description of the route, if available
+     */
+    let description: String?
+    
     // MARK: Initializers
     
     /**
@@ -44,7 +49,6 @@ struct Route {
      */
     init(jsonData: Data) throws {
         
-        print("Creating json object")
         
         do {
             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any] {
@@ -64,6 +68,7 @@ struct Route {
                     throw RouteError.jsonDecodingError("difficulty")
                 }
                 
+                
                 if let latitude = json["latitude"] as? Double, let longitude = json["longitude"] as? Double {
                     self.generalCoords = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 } else {
@@ -77,6 +82,8 @@ struct Route {
                 } else {
                     throw RouteError.jsonDecodingError("path")
                 }
+                
+                self.description = json["description"] as? String
                 
                 
             } else {
@@ -103,11 +110,12 @@ struct Route {
         )
     }
     
-    init(id: Int, name: String, location: CLLocationCoordinate2D, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D]) {
+    init(id: Int, name: String, location: CLLocationCoordinate2D, difficulty: Difficulty, pathCoords: [CLLocationCoordinate2D], description: String? = nil) {
         self.name = name
         self.generalCoords = location
         self.difficulty = difficulty
         self.pathCoords = pathCoords
+        self.description = description
     }
     
     // MARK: Enumerations
@@ -115,7 +123,7 @@ struct Route {
     /**
      * The difficulty of a route
      */
-    enum Difficulty: Int {
+    enum Difficulty: Int, CaseIterable {
         case green = 0
         case blue = 1
         case black = 2

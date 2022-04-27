@@ -8,24 +8,33 @@
 import UIKit
 import MapKit
 
-class MainViewController: UIViewController, MKMapViewDelegate {
+class MainViewController: UIViewController, MKMapViewDelegate, RouteManagerDelegate {
+    
     
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    var routes: [Route] = [] {
+        didSet {
+            DispatchQueue.main.async { [self] in
+                self.mapView.addAnnotations( routes.map { RouteAnnotation(route: $0) } )
+                self.mapView.addOverlays( routes.map { RouteOverlay(route: $0) } )
+            }
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        RouteManager.addDelegate(self)
+        
         CLLocationManager().requestWhenInUseAuthorization()
         
+        gatherRoutes { self.routes = $0 }
+        
         self.mapView.delegate = self
-        
-        gatherRoutes { routes in
-            self.mapView.addAnnotations( routes.map { RouteAnnotation(route: $0) } )
-            self.mapView.addOverlays( routes.map { RouteOverlay(route: $0) } )
-        }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +56,7 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: greekPeakRegion), animated: false)
         
         mapView.showsUserLocation = true
-        mapView.showsCompass = true
+        mapView.showsCompass = false
     }
     
     
@@ -73,6 +82,21 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         }
 
         return MKOverlayRenderer(overlay: overlay)
+    }
+    
+    // MARK: Segue Handlers
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let routesVC = segue.destination as? RouteListViewController {
+            routesVC.routes = routes
+        }
+    }
+    
+    // MARK: Route Loading
+    
+    func routesReloaded() {
+        print("Loaded new routes")
+        routes = RouteManager.allRoutes
     }
     
     // MARK: Methods

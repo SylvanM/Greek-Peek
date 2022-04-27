@@ -105,7 +105,6 @@ class NetworkManager {
                 }
             }
         }
-        
     }
     
     // MARK: - Errors
